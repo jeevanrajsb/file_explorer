@@ -1,0 +1,18 @@
+<%- include('partials/head')%>
+
+<%- include('partials/navbar')%>
+
+    <h1><%= comment.title%></h1>
+    <h6><%= comment.contents%></h6>
+    <a href="/comments">
+        <button type="button" class="btn btn-outline-primary">back</button>
+    </a>
+    <a href="/comments/<%= comment.id%>/edit">
+        <button type="button" class="btn btn-outline-primary">edit</button>
+    </a>
+    <h1></h1><br>
+    <form method="post" action="/comments/<%= comment.id %>?_method=delete">
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+    
+<%- include('partials/footer')%>

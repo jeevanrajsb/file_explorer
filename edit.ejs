@@ -1,0 +1,12 @@
+<%- include('partials/head')%>
+
+<%- include('partials/navbar')%>
+    <h1>Edit <%= file.title %></h1>
+    <form action="/comments/<%= file.id%>?_method=PATCH" method="post">
+        <textarea name="comment" rows="10" cols="100">
+            <%= file.contents %>
+        </textarea>
+        <br>
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+<%- include('partials/footer')%>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Login Page</title>
+        <link href="login.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrap">
+            <form action="/correct" method="post">
+                <h1>LOGIN</h1>
+                <div class="user-name">
+                    <input type="text" placeholder="username" name='user' required>
+                    <img src="user.png">
+                </div>
+                <div class="pass-container">
+                    <input type="password" placeholder="Password" name='pass' required>
+                    <img src="lock.png">
+                </div>
+                <div>
+                    <h5><%= obj[0].error %></h5>
+                </div>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </body>
+</html>
